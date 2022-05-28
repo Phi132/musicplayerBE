@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 
-let port = 8888;
+// let port = 8888;
 
 app.use(cors({
     origin: "*"
@@ -89,6 +89,6 @@ app.post('/login', (req, res) => {
 
 
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(process.env.PORT, () => {
+    console.log(`Example app listening at http://localhost:${process.env.PORT}`)
 })
